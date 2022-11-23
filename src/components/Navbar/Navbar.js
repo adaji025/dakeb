@@ -35,9 +35,9 @@ const Navbar = () => {
           {navMenuItems.map((menu, idx) => (
             <span
               key={idx}
-              className={`block relative  font-semibold border-b-4 border-transparent text-base md:text-xl text-[#333333] cursor-pointer hover:text-primary-green-50 hover:border-primary-green-50  border-primary-green-50 transition- duration-200 ${
+              className={`block relative font-semibold border-b-4 border-transparent text-base md:text-xl lg:text-[#333333] cursor-pointer hover:text-[#DEA90A] hover:lg:text-primary-green-50 hover:lg:border-primary-green-50   transition- duration-200 ${
                 router.pathname === menu.url
-                  ? "!border-primary-green-50 !text-primary-green-50"
+                  ? "lg:border-primary-green-50 lg:text-primary-green-50"
                   : ""
               } ${
                 menu.title === "Get started"
@@ -65,7 +65,7 @@ const Navbar = () => {
           ))}
           {dropdown && (
             <div
-              className="bg-white inline-flex flex-col gap-3 font-medium text-left p-3 w-[300px] shadow absolute top-[52%] lg:top-12  left-[53%] rounded"
+              className="bg-white text-black inline-flex flex-col gap-3 font-medium text-left p-3 min-w-[150px] max-w-[300px] shadow absolute top-[52%] lg:top-12  left-[53%] rounded"
               onMouseLeave={() => setDropdown(false)}
             >
               <div
@@ -73,6 +73,7 @@ const Navbar = () => {
                 onClick={() => {
                   navigate("/gallery/pictures");
                   setDropdown(!dropdown);
+                  setMenu(false);
                 }}
               >
                 Picture
@@ -82,6 +83,7 @@ const Navbar = () => {
                 onClick={() => {
                   navigate("/gallery/videos");
                   setDropdown(!dropdown);
+                  setMenu(false);
                 }}
               >
                 Video

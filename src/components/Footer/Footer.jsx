@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="overflow-hidden p-4 bg-primary-green-100">
       <div className="max-w-[1440px] w-full mx-auto">
-        <img src={logo} alt="" />
+        <img src={logo} alt="" className="mb-1" />
         <Grid className="">
           <Grid.Col md={6} lg={3}>
             <h2 className="text-primary-yellow">DAKEB FARMS</h2>
