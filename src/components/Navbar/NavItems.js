@@ -9,15 +9,15 @@ export const navMenuItems = [
     },
     {
         title: 'What we do',
-        url: '/faq'
+        url: '/what-we-do'
     },
     {
         title: 'Gallery',
-        url: '/search'
+        url: '/gallery'
     },
     {
         title: 'Blog',
-        url: '/contact'
+        url: '/blog'
     },
     {
         title: 'Contact Us',
@@ -27,8 +27,4 @@ export const navMenuItems = [
         title: 'Get started',
         url: '/auth/login'
     },
-    // {
-    //     title: 'Register',
-    //     url: '/auth/register'
-    // },
 ]

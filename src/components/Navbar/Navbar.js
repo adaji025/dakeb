@@ -1,33 +1,18 @@
-
-import styles from './Navbar.module.css'
-import React, { useState } from "react";
+import styles from "./Navbar.module.css";
+import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { navMenuItems } from "./NavItems";
-import logo from '../../assets/svg/dakeb-logo.svg'
+import logo from "../../assets/svg/dakeb-logo.svg";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  const router = useNavigate();
-  const [scrollBg, setScrollBg] = useState(false)
-
-  const changeBg = () => {
-    if (window.scrollY >= 20) {
-      setScrollBg(true);
-    }else {
-      setScrollBg(false)
-    }
-  };
-
-    
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", changeBg);
-    }
- 
-  
+  const [dropdown, setDropdown] = useState(false);
+  const router = useLocation();
+  const navigate = useNavigate();
 
   return (
-    <div className={`${styles.navContainer} ${scrollBg ? 'bg-black/30 shadow-sm' : ''}`}>
+    <div className={`${styles.navContainer}`}>
       <nav className={`p-4 ${styles.navbarItems}`}>
         <div className={styles.logo}>
           <img src={logo} alt="" />
@@ -36,7 +21,11 @@ const Navbar = () => {
           className={`cursor-pointer pr-2 ${styles.menuIcon}`}
           onClick={() => setMenu(!menu)}
         >
-          {menu ? <AiOutlineClose size={25} color="#157145" /> : <AiOutlineMenu size={25} color="#157145" />}
+          {menu ? (
+            <AiOutlineClose size={25} color="#157145" />
+          ) : (
+            <AiOutlineMenu size={25} color="#157145" />
+          )}
         </div>
         <div
           className={` ${
@@ -45,31 +34,71 @@ const Navbar = () => {
         >
           {navMenuItems.map((menu, idx) => (
             <span
-            key={idx}
-              className={`block p-2 font-semibold text-base md:text-xl !text-primary-light cursor-pointer hover:bg-green-200 rounded-[10px] transition-all duration-200 ${
+              key={idx}
+              className={`block relative  font-semibold border-b-4 border-transparent text-base md:text-xl text-[#333333] cursor-pointer hover:text-primary-green-50 hover:border-primary-green-50  border-primary-green-50 transition- duration-200 ${
                 router.pathname === menu.url
-                  ? "bg-green-200"
-                  : "text-primary-dark"
-              } ${menu.title === 'Get started' ? 'lg:hidden' : menu.title === 'Register' ? 'lg:hidden': '' }`}
+                  ? "!border-primary-green-50 !text-primary-green-50"
+                  : ""
+              } ${
+                menu.title === "Get started"
+                  ? "lg:hidden"
+                  : menu.title === "Register"
+                  ? "lg:hidden"
+                  : ""
+              }`}
               onClick={() => {
-                router.push(menu.url)
-                setMenu(false)
+                navigate(menu.url);
+                console.log(menu.url);
+                setMenu(false);
+                if (menu.title === "Gallery") {
+                  setDropdown(!dropdown);
+                }
+              }}
+              onMouseEnter={() => {
+                if (menu.title === "Gallery") {
+                  setDropdown(!dropdown);
+                }
               }}
             >
               {menu.title}
             </span>
           ))}
+          {dropdown && (
+            <div
+              className="bg-white inline-flex flex-col gap-3 font-medium text-left p-3 w-[300px] shadow absolute top-12 left-[53%] rounded"
+              onMouseLeave={() => setDropdown(false)}
+            >
+              <div
+                className="cursor-pointer text-lg"
+                onClick={() => {
+                  navigate("/gallery/pictures");
+                  setDropdown(!dropdown);
+                }}
+              >
+                Picture
+              </div>
+              <div
+                className="cursor-pointer text-lg"
+                onClick={() => {
+                  navigate("/gallery/videos");
+                  setDropdown(!dropdown);
+                }}
+              >
+                Video
+              </div>
+            </div>
+          )}
         </div>
-          <div
-            className={`hidden lg:flex gap-8 justify-center font-semibold mr-2`}
-          >
-            <button className="border border-primary-blue w-[132px] h-[48px] rounded-[10px]  hover:bg-primary-green hover:text-primary-light bg-primary-light transition-all duration-200">
-              Register
-            </button>
-          </div>
+        <div
+          className={`hidden lg:flex gap-8 justify-center font-semibold mr-2`}
+        >
+          <button className="border border-primary-blue w-[132px] h-[48px] rounded-[10px]  hover:bg-primary-green hover:text-primary-light bg-primary-light transition-all duration-200">
+            Register
+          </button>
+        </div>
       </nav>
     </div>
   );
 };
 
-export default Navbar
+export default Navbar;
