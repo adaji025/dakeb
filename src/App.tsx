@@ -8,13 +8,15 @@ import Blog from "./pages/Blog/Blog";
 import Contact from "./pages/Contact/Contact";
 import Pictures from "./pages/Pictures/Pictures";
 import Videos from "./pages/Videos/Videos";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/what-we-do" element={<Service />} />
         <Route path="/blog" element={<Blog />} />
@@ -22,6 +24,7 @@ function App() {
         <Route path="/gallery/pictures" element={<Pictures />} />
         <Route path="/gallery/videos" element={<Videos />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

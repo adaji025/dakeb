@@ -65,7 +65,7 @@ const Navbar = () => {
           ))}
           {dropdown && (
             <div
-              className="bg-white inline-flex flex-col gap-3 font-medium text-left p-3 w-[300px] shadow absolute top-12 left-[53%] rounded"
+              className="bg-white inline-flex flex-col gap-3 font-medium text-left p-3 w-[300px] shadow absolute top-[52%] lg:top-12  left-[53%] rounded"
               onMouseLeave={() => setDropdown(false)}
             >
               <div
