@@ -40,6 +40,14 @@ const Home = () => {
                   Dignissimos iure voluptatum vitae sed ipsa saepe quam qui sint
                   deserunt maiores.
                 </p>
+                <div className="flex justify-center gap-6 font-medium mt-6">
+                  <button className="bg-primary-yellow text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
+                  Get started
+                  </button>
+                  <button className="border border-white text-white w-[192px] h-[55px] rounded-[30px]  hover:border-primary-green-50/80   transition-all duration-300">
+                  Learn more
+                  </button>
+                </div>
               </div>
             </div>
           </div>

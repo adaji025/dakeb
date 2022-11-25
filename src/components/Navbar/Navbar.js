@@ -94,8 +94,8 @@ const Navbar = () => {
         <div
           className={`hidden lg:flex gap-8 justify-center font-semibold mr-2`}
         >
-          <button className="border border-primary-blue w-[132px] h-[48px] rounded-[10px]  hover:bg-primary-green hover:text-primary-light bg-primary-light transition-all duration-200">
-            Register
+          <button className="border border-primary-green-50 text-primary-green-50 w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
+            Get started
           </button>
         </div>
       </nav>
