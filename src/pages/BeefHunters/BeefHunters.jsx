@@ -18,7 +18,7 @@ const BeefHunters = () => {
       </div>
       <div className="mt-20 text-center">
         <h1 className="font-semibold text-[32px] text-primary-green-50 font-anglecia">
-          Join our chick hunter program
+          Join our beef hunter program
         </h1>
         <p className="max-w-[502px] mx-auto mt-3 text-primary-dark-50">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo
