@@ -11,7 +11,7 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import flowerPlant from "../../assets/images/flower-plant.png";
-import styles from './Contact.module.css'
+import styles from "./Contact.module.css";
 
 const Contact = () => {
   return (
@@ -76,15 +76,29 @@ const Contact = () => {
               <img src={flowerPlant} alt="" className="w-full object-cover" />
               <div className="flex items-center justify-center z-[3] absolute top-0 left-0 w-full lg:h-[90vh]">
                 <div className="text-white">
-                  <h2 className="font-semibold font-anglecia text-3xl">Send us a message</h2>
-                  <p className="max-w-[400px] mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo placerat enim fames egestas libero.</p>
+                  <h2 className="font-semibold font-anglecia text-3xl">
+                    Send us a message
+                  </h2>
+                  <p className="max-w-[400px] mt-5">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Justo placerat enim fames egestas libero.
+                  </p>
                 </div>
               </div>
               <div className="z-[2] absolute top-0 left-0  w-full lg:h-[90vh] bg-black/50"></div>
             </div>
           </Grid.Col>
           <Grid.Col md={6} className="">
-            <div className="lg:h-[90vh] flex flex-col justify-center items-center ">
+            <div className="h-[90vh] flex flex-col justify-center items-center ">
+              <div className="mb-10 lg:hidden">
+                <h2 className="font-semibold font-anglecia text-3xl">
+                  Send us a message
+                </h2>
+                <p className="max-w-[600px] mt-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo
+                  placerat enim fames egestas libero.
+                </p>
+              </div>
               <TextInput
                 className="max-w-[607px] w-full mb-8  !border-transparent"
                 placeholder="Your name"
