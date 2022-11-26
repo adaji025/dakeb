@@ -11,7 +11,7 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import flowerPlant from "../../assets/images/flower-plant.png";
-import { CustomInputField } from "../../components/FormFields/FormFields";
+import styles from './Contact.module.css'
 
 const Contact = () => {
   return (
@@ -69,15 +69,22 @@ const Contact = () => {
           </Grid.Col>
         </Grid>
       </div>
-      <div className="lg:h-[80vh] bg-[#1571450D]/5 overflow-hidden lg:mb-20">
+      <div className="lg:h-[90vh] bg-[#1571450D]/5 overflow-hidden lg:mb-20">
         <Grid className="w-full overflow-hidden mx-auto">
           <Grid.Col md={6}>
-            <div className="relative md:w-full hidden lg:block">
+            <div className={`relative md:w-full hidden lg:block ${styles.msg}`}>
               <img src={flowerPlant} alt="" className="w-full object-cover" />
+              <div className="flex items-center justify-center z-[3] absolute top-0 left-0 w-full lg:h-[90vh]">
+                <div className="text-white">
+                  <h2 className="font-semibold font-anglecia text-3xl">Send us a message</h2>
+                  <p className="max-w-[400px] mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo placerat enim fames egestas libero.</p>
+                </div>
+              </div>
+              <div className="z-[2] absolute top-0 left-0  w-full lg:h-[90vh] bg-black/50"></div>
             </div>
           </Grid.Col>
           <Grid.Col md={6} className="">
-            <div className="lg:h-[80vh] flex flex-col justify-center items-center ">
+            <div className="lg:h-[90vh] flex flex-col justify-center items-center ">
               <TextInput
                 className="max-w-[607px] w-full mb-8  !border-transparent"
                 placeholder="Your name"
@@ -101,6 +108,7 @@ const Contact = () => {
                 placeholder="Your message..."
                 // label="Your comment"
                 size="xl"
+                radius="lg"
                 withAsterisk
                 onChange={(e) => console.log(e.target.value)}
               />

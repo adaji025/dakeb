@@ -15,3 +15,10 @@ code {
   font-family: 'Montserrat', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "anglecia";
+  src: local("anglecia"),
+   url("../src/fonts/anglecia/AngleciaProDisplay-Regular.otf") format("truetype");
+  /* font-weight: bold; */
+  }

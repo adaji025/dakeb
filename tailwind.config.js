@@ -17,6 +17,9 @@ module.exports = {
         },
       },
     },
+    fontFamily: {
+      anglecia: "anglecia"
+    }
   },
   plugins: [],
 };
