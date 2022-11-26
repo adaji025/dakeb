@@ -9,6 +9,9 @@ import Contact from "./pages/Contact/Contact";
 import Pictures from "./pages/Pictures/Pictures";
 import Videos from "./pages/Videos/Videos";
 import Footer from "./components/Footer/Footer";
+import BeefHunters from "./pages/BeefHunters/BeefHunters";
+import ChickHunters from "./pages/ChickHunters/ChickHunters";
+import Careers from "./pages/Careers/Careers";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery/pictures" element={<Pictures />} />
         <Route path="/gallery/videos" element={<Videos />} />
+        <Route path="/beef-hunter-careers" element={<BeefHunters />} />
+        <Route path="/chick-hunter-careers" element={<ChickHunters />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
       <Footer />
     </div>

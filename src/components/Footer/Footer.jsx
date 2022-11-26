@@ -4,9 +4,11 @@ import { CiMail, CiFacebook } from "react-icons/ci";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { CgTwitter } from "react-icons/cg";
 import logo from "../../assets/svg/dakeb-logo.svg";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
     let currentYear = new  Date().getFullYear()
+    const navigate = useNavigate()
   return (
     <footer className="overflow-hidden p-4 bg-primary-green-100">
       <div className="max-w-[1440px] w-full mx-auto">
@@ -43,19 +45,20 @@ const Footer = () => {
           <Grid.Col md={6} lg={3}>
             <h2 className="text-primary-yellow font-medium">Services</h2>
             <div className=" flex flex-col gap-3 mt-2">
-              <span className="text-sm block text-[#F2F2F2]">Beef hunter</span>
-              <span className="text-sm block text-[#F2F2F2]">Chick hunter</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/beef-hunter-careers")} >Beef hunter</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/chick-hunter-careers")}>Chick hunter</span>
             </div>
           </Grid.Col>
           <Grid.Col md={6} lg={3}>
             <h2 className="text-primary-yellow font-medium">Get to know us</h2>
             <div className=" flex flex-col gap-3 mt-2">
-              <span className="text-sm block text-[#F2F2F2]">About us</span>
-              <span className="text-sm block text-[#F2F2F2]">What we do</span>
-              <span className="text-sm block text-[#F2F2F2]">Contact us</span>
-              <span className="text-sm block text-[#F2F2F2]">Careers</span>
-              <span className="text-sm block text-[#F2F2F2]">Gallery</span>
-              <span className="text-sm block text-[#F2F2F2]">Blog</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/about")}>About us</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/services")}>What we do</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/contact")}>Contact us</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/careers")}>Careers</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/pictures")}>Picture Gallery</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/videos")}>Video Gallery</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/blog")}>Blog</span>
             </div>
           </Grid.Col>
           <Grid.Col md={6} lg={3}>

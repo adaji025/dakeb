@@ -1,4 +1,4 @@
-.aboutContainer {
+.serviceContainer {
     height: 70vh;
     width: 100%;
     background: url(../../assets/images/banner-2.png);
@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.aboutContainer::before {
+.serviceContainer::before {
     content: "";
     position: absolute;
     top: 0;
