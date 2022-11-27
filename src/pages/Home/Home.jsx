@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import banner1 from "../../assets/images/banner1.png";
 import banner2 from "../../assets/images/banner-2.png";
@@ -9,6 +8,7 @@ import chiFarms from "../../assets/svg/chi-farms.svg";
 import eagleFlours from "../../assets/svg/eagle-flour.svg";
 import crownFlour from "../../assets/svg/crown-flour.svg";
 import flower from "../../assets/svg/flower.svg";
+import flower1 from "../../assets/svg/flowers1.svg";
 import polygon1 from "../../assets/svg/Polygon-1.svg";
 import polygon2 from "../../assets/svg/Polygon-2.svg";
 import cows from "../../assets/images/cows-home.png";
@@ -23,19 +23,13 @@ import "swiper/css/navigation";
 
 import { Navigation } from "swiper";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import { faqs, testimonialData } from "../../data/data";
+import {  sevicesData } from "../../data/data";
 import { Accordion, Grid } from "@mantine/core";
+import FormComponent from "../../components/FormComponent/FormComponent";
+import Testimonial from "../../components/Testimonial/Testimonial";
 // import { Accordion } from "../../components/Accordion/Accordion";
 
 const Home = () => {
-  const [clicked, setClicked] = useState("0");
-
-  const handleToggle = (index) => {
-    if (clicked === index) {
-      return setClicked("0");
-    }
-    setClicked(index);
-  };
   return (
     <>
       <Swiper
@@ -203,7 +197,7 @@ const Home = () => {
         <div className="xl:absolute left-0 top-[40%] w-full">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex justify-center flex-wrap gap-16 max-w-[1440px] mx-auto">
-              {testimonialData.map((item, idx) => (
+              {sevicesData.map((item, idx) => (
                 <ProductCard {...{ item, idx }} key={idx} />
               ))}
             </div>
@@ -358,6 +352,17 @@ const Home = () => {
             </Grid.Col>
           </Grid>
         </div>
+      </div>
+
+      {/* contact */}
+      <div>
+        <FormComponent />
+      </div>
+
+      {/* Testimonial */}
+      <div className="bg-[#1571451A]/10 w-full relative my-10">
+        <Testimonial />
+        <img src={flower1} className="absolute top-0 right-32" alt="" />
       </div>
     </>
   );
