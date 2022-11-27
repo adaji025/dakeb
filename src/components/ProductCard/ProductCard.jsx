@@ -1,7 +1,7 @@
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item, idx}) => {
   return (
-    <div className="w-[269px] h-[302px] bg-white flex flex-col items-center justify-center shadow-md p-4 rounded-[30px]">
+    <div className="w-[269px] h-[302px] bg-white flex flex-col items-center justify-center shadow-md p-4 rounded-[30px]" key={idx}>
       <img src={item.img} alt="" />
       <h4 className="my-2">{item.title}</h4>
       <p className="text-center">{item.text}</p>
