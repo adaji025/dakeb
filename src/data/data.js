@@ -3,6 +3,17 @@ import palmKernel from "../assets/images/palm-kernel.png";
 import pig from "../assets/images/pig.png";
 import goat from "../assets/images/goat.png";
 import img from "../assets/images/farishmat .jpg";
+import ourRam from "../assets/images/our-ram.png";
+import ourfishery from "../assets/images/our-fishery.png";
+import ourpoultry from "../assets/images/our-poultry.png";
+import ourPiggery from "../assets/images/our-piggery.png";
+import ourCattles from "../assets/images/our-cattle.png";
+
+import ourCashew from "../assets/images/our-cashew.png";
+import ourmaize from "../assets/images/our-maize.png";
+import ourMillet from "../assets/images/our-millet.png";
+import OurPalmKernel from "../assets/images/our-palm-kernel.png";
+import ourcassava from "../assets/images/our-cassava.png";
 
 export const sevicesData = [
   {
@@ -52,6 +63,52 @@ export const testimonialData = [
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien massa urna venenatis',
         img: img
     },
+]
+
+export const animalHusbandary = [
+  {
+    img: ourRam,
+    title: 'Our ram'
+  },
+  {
+    img: ourpoultry,
+    title: 'Our ram'
+  },
+  {
+    img: ourCattles,
+    title: 'Our ram'
+  },
+  {
+    img: ourfishery,
+    title: 'Our ram'
+  },
+  {
+    img: ourPiggery,
+    title: 'Our ram'
+  },
+]
+
+export const plantation = [
+  {
+    img: ourCashew,
+    title: 'Our Cashew'
+  },
+  {
+    img: OurPalmKernel,
+    title: 'Our palm kernel'
+  },
+  {
+    img: ourcassava,
+    title: 'Our cassava'
+  },
+  {
+    img: ourmaize,
+    title: 'Our maize'
+  },
+  {
+    img: ourMillet,
+    title: 'Our millet'
+  },
 ]
 
 
