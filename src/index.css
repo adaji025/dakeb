@@ -22,3 +22,7 @@ code {
    url("../src/fonts/anglecia/AngleciaProDisplay-Regular.otf") format("truetype");
   /* font-weight: bold; */
   }
+
+  .font-ps {
+    font-family: 'Dancing Script', cursive !important;
+  }
