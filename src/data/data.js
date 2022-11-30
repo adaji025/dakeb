@@ -3,6 +3,7 @@ import palmKernel from "../assets/images/palm-kernel.png";
 import pig from "../assets/images/pig.png";
 import goat from "../assets/images/goat.png";
 import img from "../assets/images/farishmat .jpg";
+
 import ourRam from "../assets/images/our-ram.png";
 import ourfishery from "../assets/images/our-fishery.png";
 import ourpoultry from "../assets/images/our-poultry.png";
@@ -14,6 +15,8 @@ import ourmaize from "../assets/images/our-maize.png";
 import ourMillet from "../assets/images/our-millet.png";
 import OurPalmKernel from "../assets/images/our-palm-kernel.png";
 import ourcassava from "../assets/images/our-cassava.png";
+
+import event1 from '../assets/images/event1.png'
 
 export const sevicesData = [
   {
@@ -141,6 +144,51 @@ export const careers = [
     date: '14th July, 2022',
     location: 'lagos',
     jobType: 'Full-time'
+  },
+]
+
+export const events = [
+  {
+    title: "The confluence",
+    day: '23rd',
+    month: 'Nov',
+    desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
+    img: event1
+  },
+  {
+    title: "The confluence",
+    day: '23rd',
+    month: 'Nov',
+    desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
+    img: event1
+  },
+  {
+    title: "The confluence",
+    day: '23rd',
+    month: 'Nov',
+    desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
+    img: event1
+  },
+  {
+    title: "The confluence",
+    day: '23rd',
+    month: 'Nov',
+    desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
+    img: event1
+  },
+  {
+    title: "The confluence",
+    day: '23rd',
+    month: 'Nov',
+    desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
+    img: event1
+  },
+  {
+    title: "The confluence",
+    day: '23rd',
+    month: 'Nov',
+    desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
+    img: event1
   },
 ]
 

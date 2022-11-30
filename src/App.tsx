@@ -13,6 +13,7 @@ import BeefHunters from "./pages/BeefHunters/BeefHunters";
 import ChickHunters from "./pages/ChickHunters/ChickHunters";
 import Careers from "./pages/Careers/Careers";
 import Complains from "./pages/Complains/Complains";
+import CharityEvents from "./pages/CharityEvents/CharityEvents";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/chick-hunter-careers" element={<ChickHunters />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/complains" element={<Complains />} />
+        <Route path="/charity-events" element={<CharityEvents />} />
       </Routes>
       <Footer />
     </div>
