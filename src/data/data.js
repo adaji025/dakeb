@@ -17,6 +17,8 @@ import OurPalmKernel from "../assets/images/our-palm-kernel.png";
 import ourcassava from "../assets/images/our-cassava.png";
 
 import event1 from '../assets/images/event1.png'
+import event2 from '../assets/images/event2.png'
+import event3 from '../assets/images/event3.png'
 
 export const sevicesData = [
   {
@@ -153,42 +155,48 @@ export const events = [
     day: '23rd',
     month: 'Nov',
     desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
-    img: event1
+    img: event1,
+    price: 'Free'
   },
   {
     title: "The confluence",
     day: '23rd',
     month: 'Nov',
     desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
-    img: event1
+    img: event2,
+    price: '$10'
   },
   {
     title: "The confluence",
     day: '23rd',
     month: 'Nov',
     desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
-    img: event1
+    img: event3,
+    price: 'free'
   },
   {
     title: "The confluence",
     day: '23rd',
     month: 'Nov',
     desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
-    img: event1
+    img: event3,
+    price: '$20'
   },
   {
     title: "The confluence",
     day: '23rd',
     month: 'Nov',
     desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
-    img: event1
+    img: event2,
+    price: '$5'
   },
   {
     title: "The confluence",
     day: '23rd',
     month: 'Nov',
     desc: 'Lorem ipsum dolor sit amet, ipsum adipiscing elit.',
-    img: event1
+    img: event1,
+    price: '$30'
   },
 ]
 
