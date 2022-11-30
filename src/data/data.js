@@ -111,6 +111,38 @@ export const plantation = [
   },
 ]
 
+export const careers = [
+  {
+    position: 'Sales manager',
+    date: '14th July, 2022',
+    location: 'lagos',
+    jobType: 'Full-time'
+  },
+  {
+    position: 'Sales manager',
+    date: '14th July, 2022',
+    location: 'lagos',
+    jobType: 'Full-time'
+  },
+  {
+    position: 'Sales manager',
+    date: '14th July, 2022',
+    location: 'lagos',
+    jobType: 'Full-time'
+  },
+  {
+    position: 'Sales manager',
+    date: '14th July, 2022',
+    location: 'lagos',
+    jobType: 'Full-time'
+  },
+  {
+    position: 'Sales manager',
+    date: '14th July, 2022',
+    location: 'lagos',
+    jobType: 'Full-time'
+  },
+]
 
 // export const faqs = [
 //     {
