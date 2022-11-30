@@ -1,5 +1,3 @@
-import React from "react";
-import { Grid } from "swiper";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import { animalHusbandary, plantation } from "../../data/data";
 import styles from "./Service.module.css";
