@@ -64,11 +64,11 @@ const Footer = () => {
           <Grid.Col md={6} lg={3}>
             <h2 className="text-primary-yellow font-medium">Other pages</h2>
             <div className=" flex flex-col gap-3 mt-2">
-              <span className="text-sm block text-[#F2F2F2]">
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/charity-events")}>
                 Charity events
               </span>
-              <span className="text-sm block text-[#F2F2F2]">Coming soon</span>
-              <span className="text-sm block text-[#F2F2F2]">Complaints</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer  hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/coming-soon")}>Coming soon</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer  hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/complains")}>Complaints</span>
             </div>
           </Grid.Col>
         </Grid>

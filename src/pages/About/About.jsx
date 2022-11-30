@@ -1,6 +1,7 @@
 import { Grid } from "@mantine/core";
 import styles from "./About.module.css";
 import yellowRect from "../../assets/images/yellowRect.png";
+import flower from "../../assets/svg/flower.svg";
 import brownCows from "../../assets/images/brown-cows.png";
 import irrigation from "../../assets/images/irrigation.png";
 import mission from "../../assets/svg/mission.svg";
@@ -118,7 +119,7 @@ const About = () => {
         </Grid>
       </div>
 
-      <div className="bg-[#E8F1EC] mb-20">
+      <div className="bg-[#E8F1EC] mb-20 relative">
         <div className="max-w-[1200px] mx-auto py-10 px-4 flex items-center">
           <Grid className="w-full">
             <Grid.Col sm={6}>
@@ -134,19 +135,19 @@ const About = () => {
               </p>
               <div className="mt-4">
                 <div className="flex gap-2 mb-5">
-                  <img src={tick} alt="" />
+                  <img src={tick} alt="tick" />
                   <p className="text-primary-green-100 text-xl font-anglecia">
                     100% organic produce
                   </p>
                 </div>
                 <div className="flex gap-2 mb-5">
-                  <img src={tick} alt="" />
+                  <img src={tick} alt="tick" />
                   <p className="text-primary-green-100 text-xl font-anglecia">
                     Accurate delivery
                   </p>
                 </div>
                 <div className="flex gap-2 mb-5">
-                  <img src={tick} alt="" />
+                  <img src={tick} alt="tick" />
                   <p className="text-primary-green-100 text-xl font-anglecia">
                     Apt customer service
                   </p>
@@ -155,6 +156,7 @@ const About = () => {
             </Grid.Col>
           </Grid>
         </div>
+        <img src={flower} className="absolute right-8 top-8" alt="flower" />
       </div>
     </>
   );

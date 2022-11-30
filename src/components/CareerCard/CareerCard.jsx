@@ -4,7 +4,7 @@ import { AiOutlineFieldTime } from "react-icons/ai";
 
 const CareerCard = ({item}) => {
   return (
-    <div className="h-[145px] w-full flex items-center justify-between bg-[#E8F1EC] px-4 sm:px-20 py-4">
+    <div className="h-[145px] w-full flex items-center justify-between bg-[#E8F1EC] px-4 sm:px-8 md:px-20 py-4">
       <div className="md:flex gap-5 items-end justify-between max-w-[500px] w-full">
         <div className="">
           <h2 className="text-lg text-[#3A3A3A] font-semibold">

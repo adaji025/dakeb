@@ -1,25 +1,26 @@
-import React from "react";
 import { BiUser } from "react-icons/bi";
 import { CiMail } from "react-icons/ci";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsGenderFemale, BsTelephone } from "react-icons/bs";
 import { CustomInputField } from "../../components/FormFields/FormFields";
+import flower from "../../assets/svg/flower.svg";
+import maize from "../../assets/svg/maize.svg";
 import styles from "../Services/Service.module.css";
 
-const BeefHunters = () => {
+const Complains = () => {
   return (
     <>
-      <div className={styles.serviceContainer}>
-        <div className="w-full flex items-center justify-center h-full text-center">
-          <h2 className="text-5xl text-primary-yellow font-semibold mt-20 z-10">
-            Become a beef hunter
-          </h2>
-        </div>
+    <div className={styles.serviceContainer}>
+      <div className="w-full flex items-center justify-center h-full text-center">
+        <h2 className="text-5xl text-primary-yellow font-semibold font-anglecia z-10">
+          We are here for you
+        </h2>
       </div>
-      
-      <div className="mt-20 text-center">
+    </div>
+    
+    <div className="mt-20 text-center relative">
         <h1 className="font-semibold text-[32px] text-primary-green-50 font-anglecia">
-          Join our beef hunter program
+        Get in touch
         </h1>
         <p className="max-w-[502px] mx-auto mt-3 text-primary-dark-50">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo
@@ -62,9 +63,11 @@ const BeefHunters = () => {
             </button>
           </div>
         </div>
+        <img src={flower} className="absolute right-32 top-8" alt="flower" />
+        <img src={maize} className="absolute left-32 bottom-8" alt="maize" />
       </div>
     </>
   );
 };
 
-export default BeefHunters;
+export default Complains;
