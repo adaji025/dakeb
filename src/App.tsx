@@ -14,6 +14,7 @@ import ChickHunters from "./pages/ChickHunters/ChickHunters";
 import Careers from "./pages/Careers/Careers";
 import Complains from "./pages/Complains/Complains";
 import CharityEvents from "./pages/CharityEvents/CharityEvents";
+import ComingSoon from "./pages/ComingSoon/ComingSoon";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/complains" element={<Complains />} />
         <Route path="/charity-events" element={<CharityEvents />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
       </Routes>
       <Footer />
     </div>
