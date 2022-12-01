@@ -20,6 +20,14 @@ import event1 from '../assets/images/event1.png'
 import event2 from '../assets/images/event2.png'
 import event3 from '../assets/images/event3.png'
 
+import blog1 from "../assets/images/blog/blog1.png";
+import blog2 from "../assets/images/blog/blog2.png";
+import blog3 from "../assets/images/blog/blog3.png";
+import blog4 from "../assets/images/blog/blog4.png";
+import blog5 from "../assets/images/blog/blog5.png";
+// import blog1 from "../assets/images/blog/blog1.png";
+// import blog1 from "../assets/images/blog/blog1.png";
+
 export const sevicesData = [
   {
     img: corn,
@@ -200,20 +208,85 @@ export const events = [
   },
 ]
 
-// export const faqs = [
-//     {
-//       question: "Lorem ipsum dolor sit amet?",
-//       answer:
-//         "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium. Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.",
-//     },
-//     {
-//       question: "Dignissimos sequi architecto?",
-//       answer:
-//         "Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque. Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque.",
-//     },
-//     {
-//       question: "Voluptas praesentium facere?",
-//       answer:
-//         "Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque.",
-//     },
-//   ];
+export const comingSoon = [
+  {
+    title: 'The new hack to fish farming in ponds.',
+    category: 'Agriculture',
+    date: 'May, 2022'
+  },
+  {
+    title: 'The new hack to fish farming in ponds.',
+    category: 'Agriculture',
+    date: 'May, 2022'
+  },
+]
+
+export const topPost = [
+  {
+    title: 'The new hack to fish farming in ponds.',
+    category: 'Agriculture',
+    date: 'May, 2022'
+  },
+  {
+    title: 'The new hack to fish farming in ponds.',
+    category: 'Agriculture',
+    date: 'May, 2022'
+  },
+  {
+    title: 'The new hack to fish farming in ponds.',
+    category: 'Agriculture',
+    date: 'May, 2022'
+  },
+  {
+    title: 'The new hack to fish farming in ponds.',
+    category: 'Agriculture',
+    date: 'May, 2022'
+  },
+]
+
+export const blogPost = [
+  {
+    title: 'Poultry farming expose',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipg elit. Justo placerat enim fames ',
+    category: 'Agriculture',
+    date: 'May, 2022',
+    img: blog1
+  },
+  {
+    title: 'Poultry farming expose',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipg elit. Justo placerat enim fames ',
+    category: 'Agriculture',
+    date: 'May, 2022',
+    img: blog2
+  },
+  {
+    title: 'Poultry farming expose',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipg elit. Justo placerat enim fames ',
+    category: 'Agriculture',
+    date: 'May, 2022',
+    img: blog3
+  },
+  {
+    title: 'Poultry farming expose',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipg elit. Justo placerat enim fames ',
+    category: 'Agriculture',
+    date: 'May, 2022',
+    img: blog4
+  },
+  {
+    title: 'Poultry farming expose',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipg elit. Justo placerat enim fames ',
+    category: 'Agriculture',
+    date: 'May, 2022',
+    img: blog5
+  },
+  {
+    title: 'Poultry farming expose',
+    desc: 'Lorem ipsum dolor sit amet, consectetur adipg elit. Justo placerat enim fames ',
+    category: 'Agriculture',
+    date: 'May, 2022',
+    img: blog1
+  },
+]
+
+export const tags = ['Agriculture', 'Farm', 'Chick', 'LiveStock', 'Poultry']
