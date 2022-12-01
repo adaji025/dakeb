@@ -15,6 +15,7 @@ import Careers from "./pages/Careers/Careers";
 import Complains from "./pages/Complains/Complains";
 import CharityEvents from "./pages/CharityEvents/CharityEvents";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
+import PageNotFound from "./pages/404/PageNotFound";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/complains" element={<Complains />} />
         <Route path="/charity-events" element={<CharityEvents />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

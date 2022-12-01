@@ -37,7 +37,7 @@ const ComingSoon = () => {
               />
             </div>
             <button className="border mt-5 bg-primary-green-50 border-primary-green-50 text-white w-[192px] h-[55px] rounded-[30px] hover:text-primary-green-50  hover:bg-white  transition-all duration-300">
-              Get started
+            Notify me
             </button>
           </form>
             </div>
