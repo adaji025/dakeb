@@ -6,8 +6,6 @@ import About from "./pages/About/About";
 import Service from "./pages/Services/Service";
 import Blog from "./pages/Blog/Blog";
 import Contact from "./pages/Contact/Contact";
-import Pictures from "./pages/Pictures/Pictures";
-import Videos from "./pages/Videos/Videos";
 import Footer from "./components/Footer/Footer";
 import BeefHunters from "./pages/BeefHunters/BeefHunters";
 import ChickHunters from "./pages/ChickHunters/ChickHunters";
@@ -16,6 +14,8 @@ import Complains from "./pages/Complains/Complains";
 import CharityEvents from "./pages/CharityEvents/CharityEvents";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import PageNotFound from "./pages/404/PageNotFound";
+import Pictures from "./pages/Gallery/Pictures/Pictures";
+import Videos from "./pages/Gallery/Videos/Videos";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Home />} />
+        <Route path="/gallery" element={<Pictures />} />
         <Route path="/about" element={<About />} />
         <Route path="/what-we-do" element={<Service />} />
         <Route path="/blog" element={<Blog />} />

@@ -56,8 +56,8 @@ const Footer = () => {
               <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/services")}>What we do</span>
               <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/contact")}>Contact us</span>
               <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/careers")}>Careers</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/pictures")}>Picture Gallery</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/videos")}>Video Gallery</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/gallery/pictures")}>Picture Gallery</span>
+              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/gallery/videos")}>Video Gallery</span>
               <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/blog")}>Blog</span>
             </div>
           </Grid.Col>
