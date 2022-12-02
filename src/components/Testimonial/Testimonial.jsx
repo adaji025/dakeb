@@ -1,4 +1,4 @@
-import { Grid } from "@mantine/core";
+import { Grid, Tooltip } from "@mantine/core";
 import { Swiper } from "swiper/react";
 import { SwiperSlide } from "swiper/react";
 import littleFlower from "../../assets/svg/little-flower.svg";
@@ -6,7 +6,7 @@ import littleFlower from "../../assets/svg/little-flower.svg";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-import { EffectCards, Autoplay, Pagination, } from "swiper";
+import { EffectCards, } from "swiper";
 import { testimonialData } from "../../data/data";
 import TestimonialCard from "./TestimonialCard";
 
@@ -26,11 +26,12 @@ const Testimonial = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien
             massa urna venenatis
           </p>
-          <button className="bg-primary-yellow mt-5 text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
+          <button className="bg-primary-yellow hover:scale-105 duration-300 mt-5 text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
             Get started
           </button>
         </Grid.Col>
         <Grid.Col md={6} className="justify-center">
+        <Tooltip label="Tooltip" className="text-primary-green-50">
           <Swiper
             effect={"cards"}
             grabCursor={true}
@@ -45,14 +46,17 @@ const Testimonial = () => {
             // loop={true}
             className="mySwiper"
           >
+            
             {testimonialData.map((item, idx) => {
               return (
                 <SwiperSlide key={idx}>
-                  <TestimonialCard {...{ item }} />
+
+                  <TestimonialCard {...{ item, idx }} />
                 </SwiperSlide>
               );
             })}
           </Swiper>
+            </Tooltip>
         </Grid.Col>
       </Grid>
     </div>

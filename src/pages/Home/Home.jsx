@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import banner1 from "../../assets/images/banner1.png";
 import banner2 from "../../assets/images/banner-2.png";
@@ -18,18 +19,31 @@ import farmer from "../../assets/images/farmer-1.png";
 import vegetables from "../../assets/images/vegetables.png";
 import { BsFillPlayFill } from "react-icons/bs";
 import maizeVideos from "../../assets/videos/maize-video.mp4";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
 import { Navigation } from "swiper";
 import ProductCard from "../../components/ProductCard/ProductCard";
-import {  sevicesData } from "../../data/data";
+import { sevicesData } from "../../data/data";
 import { Accordion, Grid } from "@mantine/core";
 import FormComponent from "../../components/FormComponent/FormComponent";
 import Testimonial from "../../components/Testimonial/Testimonial";
-// import { Accordion } from "../../components/Accordion/Accordion";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    AOS.init({
+      duration : '700'
+    });
+  }, []);
+
   return (
     <>
       <Swiper
@@ -51,20 +65,32 @@ const Home = () => {
             <img src={banner1} alt="" className="object-cover h-screen" />
             <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center">
               <div className="text-center mx-auto">
-                <h2 className="text-white text-center font-bold text-[52px] max-w-[600px]">
+                <h2
+                  className="text-white text-center font-bold text-[52px] max-w-[600px]"
+                  data-aos="flip-down"
+                  data-aos-duration="2000"
+                >
                   Lorem <span className="text-primary-yellow">ipsum</span> dolor
                   sit, amet consectetur
                 </h2>
-                <p className="text-white text-center text-xl max-w-[650px]">
+                <p
+                  className="text-white text-center text-xl max-w-[650px]"
+                  data-aos="zoom-in"
+                  data-aos-duration="2000"
+                >
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dignissimos iure voluptatum vitae sed ipsa saepe quam qui sint
                   deserunt maiores.
                 </p>
                 <div className="flex justify-center gap-6 font-medium mt-6">
-                  <button className="bg-primary-yellow text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
+                  <button onClick={() => navigate('/beef-hunter-careers')}
+                  className="bg-primary-yellow hover:scale-105 text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300"
+                  data-aos="fade-up" data-aos-duration="2000">
                     Get started
                   </button>
-                  <button className="border border-white text-white w-[192px] h-[55px] rounded-[30px]  hover:border-primary-green-50/80  hover:border-4 transition-all duration-300">
+                  <button onClick={() => navigate('/what-we-do')}
+                  className="border border-white hover:scale-105 text-white w-[192px] h-[55px] rounded-[30px]  hover:border-primary-green-50/80  hover:border-4 transition-all duration-300"
+                       data-aos="fade-up" data-aos-duration="2000">
                     Learn more
                   </button>
                 </div>
@@ -106,7 +132,7 @@ const Home = () => {
         </SwiperSlide>
       </Swiper>
 
-      <div className="max-w-[1440px] mx-auto relative my-10">
+      <div className="max-w-[1440px] mx-auto relative my-10" data-aos="fade-up">
         <div className="grid grid-cols-3 gap-5 place-items-center sm:flex justify-between items-center max-w-[800px] mx-auto py-10">
           <img src={goldenPenny} className="w-24" alt="" />
           <img src={eagleFlours} className="w-24" alt="" />
@@ -119,7 +145,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto my-10">
+      <div className="max-w-[1440px] mx-auto my-10" data-aos="fade-up">
         <div className="grid gap-5 xl:place-items-start place-items-center lg:grid-cols-2 relative p-4">
           <div className="gap-3 hidden sm:flex">
             <img src={cows} alt="" />
@@ -138,7 +164,7 @@ const Home = () => {
             </p>
             <div>
               <div className="flex items-start gap-6 mb-3">
-                <img src={guarantee} alt="" />
+                <img src={guarantee} alt="guarantee" className="animate-bounce " />
                 <div>
                   <h3 className="text-primary-green-100 font-semibold font-anglecia text-lg mb-3">
                     100% guaranteed
@@ -150,7 +176,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex items-start gap-6">
-                <img src={littleFlower} alt="" />
+                <img src={littleFlower} alt="flower" className="animate-bounce " />
                 <div>
                   <h3 className="text-primary-green-100 font-semibold font-anglecia text-lg mb-3">
                     100% fresh produce
@@ -162,7 +188,8 @@ const Home = () => {
                 </div>
               </div>
 
-              <button className="mt-5 text-primary-green-100 text-xl font-semibold hover:text-primary-green-50">
+              <button className="mt-5 text-primary-green-100 text-xl font-semibold hover:text-primary-green-50 hover:scale-105 duration-300"
+              onClick={() => navigate('/what-we-do')}>
                 Learn More
               </button>
             </div>
@@ -177,12 +204,13 @@ const Home = () => {
                 alt=""
               />
             </div>
+            <div className="absolute top-[70px] left-[60px] font-bold text-primary-green-50">2 Years</div>
           </div>
         </div>
       </div>
 
       {/* products */}
-      <div className="my-10 relative">
+      <div className="my-10 relative" data-aos="fade-up">
         <div className="w-full max-h-[393px] xl:h-[393px] xl:bg-gray-300 flex flex-col items-center">
           <div className="text-center my-8">
             <h3 className="font-anglecia font-bold text-[40px]">
@@ -194,7 +222,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="xl:absolute left-0 top-[40%] w-full">
+        <div className="xl:absolute left-0 top-[40%] w-full overflow-x-hidden">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex justify-center flex-wrap gap-16 max-w-[1440px] mx-auto">
               {sevicesData.map((item, idx) => (
@@ -205,14 +233,18 @@ const Home = () => {
         </div>
         <div className="xl:bg-primary-green-100 h-[233px] w-full hidden xl:block"></div>
         <div className="text-center xl:bg-primary-green-100 py-6">
-          <button className="mt-5 xl:text-white text-primary-green-100 text-xl font-semibold hover:text-primary-green-50 xl:hover:underline">
+          <button onClick={() => navigate('/what-we-do')}
+           className="mt-5 xl:text-white text-primary-green-100 text-xl font-semibold hover:text-primary-green-50 xl:hover:underline">
             See all Products
           </button>
         </div>
       </div>
 
       {/* video */}
-      <div className="min-h-screen flex items-center relative">
+      <div
+        className="min-h-screen flex items-center relative overflow-hidden"
+        data-aos="fade-up"
+      >
         <div className="w-[822px] p-4 min-h-[623px] bg-primary-green-100 md:rounded-r-[20px] flex justify-start  items-center">
           <div className="max-w-[600px] mx-auto">
             <div className="flex justify-start items-center gap-3">
@@ -249,7 +281,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="absolute left-[750px] 2xl:left-[700px] hidden lg:block">
+        <div
+          className="absolute left-[750px] 2xl:left-[700px] hidden lg:block"
+          data-aos="fade-left"
+        >
           <video width="" controls className="rounded-[20px]  w-[621px]">
             <source src={maizeVideos} type="video/mp4" />
           </video>
@@ -264,7 +299,7 @@ const Home = () => {
       </div>
 
       {/* FAQ */}
-      <div className="bg-primary-green-100  my-10">
+      <div className="bg-primary-green-100  my-10" data-aos="fade-up">
         <div className="max-w-[1440px] min-h-[50vh] mx-auto flex items-center p-4">
           <Grid className="w-full">
             <Grid.Col sm={6}>
@@ -278,8 +313,9 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien
                 massa urna venenatis nullam magna nibh nulla fermentum
               </p>
-              <button className="bg-primary-yellow text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
-                Get started
+              <button onClick={() => navigate('/what-we-do')}
+               className="bg-primary-yellow text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
+                Learn More
               </button>
             </Grid.Col>
             <Grid.Col sm={6} className="max-w-[607px] w-full">
@@ -313,7 +349,7 @@ const Home = () => {
               >
                 <Accordion.Item value="one">
                   <Accordion.Control className="text-white">
-                  What is the beef hunter about?
+                    What is the beef hunter about?
                   </Accordion.Control>
                   <Accordion.Panel>
                     Colors, fonts, shadows and many other parts are customizable
@@ -323,7 +359,7 @@ const Home = () => {
 
                 <Accordion.Item value="two">
                   <Accordion.Control className="text-white">
-                  What is the chick hunter about?
+                    What is the chick hunter about?
                   </Accordion.Control>
                   <Accordion.Panel>
                     Configure components appearance and behavior with vast
@@ -332,7 +368,7 @@ const Home = () => {
                 </Accordion.Item>
                 <Accordion.Item value="three">
                   <Accordion.Control className="text-white">
-                  What is the chick hunter about?
+                    What is the chick hunter about?
                   </Accordion.Control>
                   <Accordion.Panel>
                     Configure components appearance and behavior with vast
@@ -341,7 +377,7 @@ const Home = () => {
                 </Accordion.Item>
                 <Accordion.Item value="four">
                   <Accordion.Control className="text-white">
-                  What is the chick hunter about?
+                    What is the chick hunter about?
                   </Accordion.Control>
                   <Accordion.Panel>
                     Configure components appearance and behavior with vast
@@ -355,12 +391,15 @@ const Home = () => {
       </div>
 
       {/* contact */}
-      <div>
+      <div className="my-28" data-aos="fade-up">
         <FormComponent />
       </div>
 
       {/* Testimonial */}
-      <div className="bg-[#1571451A]/10 w-full relative my-10">
+      <div
+        className="bg-[#1571451A]/10 w-full relative my-10"
+        data-aos="fade-up"
+      >
         <Testimonial />
         <img src={flower1} className="absolute top-0 right-32" alt="" />
       </div>

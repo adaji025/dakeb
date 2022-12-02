@@ -1,8 +1,19 @@
+import { useEffect } from "react";
+import {Tooltip} from '@mantine/core'
 import qMark from "../../assets/svg/qmark.svg";
 
-const TestimonialCard = ({ item }) => {
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const TestimonialCard = ({ item, idx }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="max-w-[431px] h-[283px] w-full flex justify-center items-center flex-col bg-white shadow-md rounded-[20px] overflow-hidden">
+    <Tooltip label="Tooltip" className="text-primary-green-50">
+    <div className="max-w-[431px] h-[283px] w-full flex justify-center items-center flex-col bg-white shadow-md rounded-[20px] overflow-hidden hover:scale-105 duration-300"
+    // data-aos="flip-up"
+    >
       <img src={qMark} alt="" />
       <p className="w-[350px] mx-auto text-center my-3">{item.desc}</p>
       <div className="flex gap-2">
@@ -13,6 +24,7 @@ const TestimonialCard = ({ item }) => {
         </div>
       </div>
     </div>
+    </Tooltip>
   );
 };
 

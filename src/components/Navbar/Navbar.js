@@ -94,7 +94,8 @@ const Navbar = () => {
         <div
           className={`hidden lg:flex gap-8 justify-center font-semibold mr-2`}
         >
-          <button className="border border-primary-green-50 text-primary-green-50 w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
+          <button onClick={() => navigate('/chick-hunter-careers')}
+           className="border border-primary-green-50 text-primary-green-50 w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
             Get started
           </button>
         </div>

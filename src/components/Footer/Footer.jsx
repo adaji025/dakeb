@@ -6,11 +6,19 @@ import { CgTwitter } from "react-icons/cg";
 import logo from "../../assets/svg/dakeb-logo.svg";
 import { useNavigate } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Footer = () => {
-    let currentYear = new  Date().getFullYear()
-    const navigate = useNavigate()
+  let currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <footer className="overflow-hidden p-4 bg-primary-green-100">
+    <footer className="overflow-hidden p-4 bg-primary-green-100" data-aos="fade-up">
       <div className="max-w-[1440px] w-full mx-auto">
         <img src={logo} alt="" className="mb-1" />
         <Grid className="">
@@ -45,30 +53,88 @@ const Footer = () => {
           <Grid.Col md={6} lg={3}>
             <h2 className="text-primary-yellow font-medium">Services</h2>
             <div className=" flex flex-col gap-3 mt-2">
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/beef-hunter-careers")} >Beef hunter</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/chick-hunter-careers")}>Chick hunter</span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/beef-hunter-careers")}
+              >
+                Beef hunter
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/chick-hunter-careers")}
+              >
+                Chick hunter
+              </span>
             </div>
           </Grid.Col>
           <Grid.Col md={6} lg={3}>
             <h2 className="text-primary-yellow font-medium">Get to know us</h2>
             <div className=" flex flex-col gap-3 mt-2">
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/about")}>About us</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/services")}>What we do</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/contact")}>Contact us</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/careers")}>Careers</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/gallery/pictures")}>Picture Gallery</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/gallery/videos")}>Video Gallery</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/blog")}>Blog</span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/about")}
+              >
+                About us
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/services")}
+              >
+                What we do
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/contact")}
+              >
+                Contact us
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/careers")}
+              >
+                Careers
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/gallery/pictures")}
+              >
+                Picture Gallery
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/gallery/videos")}
+              >
+                Video Gallery
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/blog")}
+              >
+                Blog
+              </span>
             </div>
           </Grid.Col>
           <Grid.Col md={6} lg={3}>
             <h2 className="text-primary-yellow font-medium">Other pages</h2>
             <div className=" flex flex-col gap-3 mt-2">
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/charity-events")}>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/charity-events")}
+              >
                 Charity events
               </span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer  hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/coming-soon")}>Coming soon</span>
-              <span className="text-sm block text-[#F2F2F2] cursor-pointer  hover:text-primary-yellow transition-all duration-300" onClick={() => navigate("/complains")}>Complaints</span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer  hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/coming-soon")}
+              >
+                Coming soon
+              </span>
+              <span
+                className="text-sm block text-[#F2F2F2] cursor-pointer  hover:text-primary-yellow transition-all duration-300"
+                onClick={() => navigate("/complains")}
+              >
+                Complaints
+              </span>
             </div>
           </Grid.Col>
         </Grid>
@@ -105,7 +171,9 @@ const Footer = () => {
             </Grid.Col>
           </Grid>
         </div>
-        <div className="text-center mt-10 text-xl text-[#F2F2F2]">Copyright &copy; {currentYear}</div>
+        <div className="text-center mt-10 text-xl text-[#F2F2F2]">
+          Copyright &copy; {currentYear}
+        </div>
       </div>
     </footer>
   );
