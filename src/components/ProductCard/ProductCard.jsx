@@ -8,7 +8,7 @@ const ProductCard = ({item, idx}) => {
   }, []);
 
   return (
-    <div className="w-[269px] h-[302px] bg-white flex flex-col items-center justify-center shadow-md p-4 rounded-[30px]"   
+    <div className="w-[269px] h-[302px] bg-white flex flex-col items-center justify-center shadow-md p-4 rounded-[30px] my-2"   
     data-aos={idx === 0 ? 'fade-right' : idx === 1 ? 'fade-down' : idx === 2 ? 'fade-up' : 'fade-left'} data-aos-duration="2000">
       <img src={item.img} alt="" />
       <h4 className="my-2">{item.title}</h4>

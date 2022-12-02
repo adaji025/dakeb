@@ -63,10 +63,10 @@ const Home = () => {
         <SwiperSlide>
           <div className="relative">
             <img src={banner1} alt="" className="object-cover h-screen" />
-            <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center">
+            <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center px-4">
               <div className="text-center mx-auto">
                 <h2
-                  className="text-white text-center font-bold text-[52px] max-w-[600px]"
+                  className="text-white text-center font-bold text-[32px] sm:text-[52px] max-w-[600px]"
                   data-aos="flip-down"
                   data-aos-duration="2000"
                 >
@@ -74,7 +74,7 @@ const Home = () => {
                   sit, amet consectetur
                 </h2>
                 <p
-                  className="text-white text-center text-xl max-w-[650px]"
+                  className="text-white text-center text-xl max-w-[650px] px-4 sm:px-0"
                   data-aos="zoom-in"
                   data-aos-duration="2000"
                 >
@@ -84,12 +84,12 @@ const Home = () => {
                 </p>
                 <div className="flex justify-center gap-6 font-medium mt-6">
                   <button onClick={() => navigate('/beef-hunter-careers')}
-                  className="bg-primary-yellow hover:scale-105 text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300"
+                  className="bg-primary-yellow hover:scale-105 text-white w-[120px] sm:w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300"
                   data-aos="fade-up" data-aos-duration="2000">
                     Get started
                   </button>
                   <button onClick={() => navigate('/what-we-do')}
-                  className="border border-white hover:scale-105 text-white w-[192px] h-[55px] rounded-[30px]  hover:border-primary-green-50/80  hover:border-4 transition-all duration-300"
+                  className="border border-white hover:scale-105 text-white w-[120px] sm:w-[192px] h-[55px] rounded-[30px]  hover:border-primary-green-50/80  hover:border-4 transition-all duration-300"
                        data-aos="fade-up" data-aos-duration="2000">
                     Learn more
                   </button>
@@ -102,11 +102,11 @@ const Home = () => {
           <img src={banner2} alt="" className="object-cover h-screen" />
           <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center">
             <div className="text-center mx-auto">
-              <h2 className="text-white text-center font-bold text-[52px] max-w-[600px]">
+              <h2 className="text-white text-center font-bold text-[32px] sm:text-[52px] max-w-[600px]">
                 Lorem <span className="text-primary-yellow">ipsum</span> dolor
                 sit, amet consectetur
               </h2>
-              <p className="text-white text-center text-xl max-w-[650px]">
+              <p className="text-white text-center text-xl max-w-[650px] px-4 sm:px-0">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Dignissimos iure voluptatum vitae sed ipsa saepe quam qui sint
                 deserunt maiores.
@@ -118,11 +118,11 @@ const Home = () => {
           <img src={banner3} alt="" className="object-cover h-screen" />
           <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center">
             <div className="text-center mx-auto">
-              <h2 className="text-white text-center font-bold text-[52px] max-w-[600px]">
+              <h2 className="text-white text-center font-bold text-[32px] sm:text-[52px] max-w-[600px]">
                 Lorem <span className="text-primary-yellow">ipsum</span> dolor
                 sit, amet consectetur
               </h2>
-              <p className="text-white text-center text-xl max-w-[650px]">
+              <p className="text-white text-center text-xl max-w-[650px] px-4 sm:px-0 mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Dignissimos iure voluptatum vitae sed ipsa saepe quam qui sint
                 deserunt maiores.
@@ -213,10 +213,10 @@ const Home = () => {
       <div className="my-10 relative" data-aos="fade-up">
         <div className="w-full max-h-[393px] xl:h-[393px] xl:bg-gray-300 flex flex-col items-center">
           <div className="text-center my-8">
-            <h3 className="font-anglecia font-bold text-[40px]">
+            <h3 className="font-anglecia font-bold text-[24px] mb-3 px-3 sm:px-0 sm:text-[40px]">
               Our featured products
             </h3>
-            <p className="max-w-[600px] text-center text-primary-dark-50">
+            <p className="max-w-[600px] text-center text-primary-dark-50 px-2 sm:px-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo
               placerat enim fames egestas libero.
             </p>
@@ -234,7 +234,7 @@ const Home = () => {
         <div className="xl:bg-primary-green-100 h-[233px] w-full hidden xl:block"></div>
         <div className="text-center xl:bg-primary-green-100 py-6">
           <button onClick={() => navigate('/what-we-do')}
-           className="mt-5 xl:text-white text-primary-green-100 text-xl font-semibold hover:text-primary-green-50 xl:hover:underline">
+           className="mt-5 xl:text-white text-primary-green-100 text-xl font-semibold hover:text-primary-yellow xl:hover:underline hover:scale-105 duration-300">
             See all Products
           </button>
         </div>
@@ -252,7 +252,7 @@ const Home = () => {
               <p className="text-white">Watch video</p>
             </div>
             <div className="mt-5">
-              <p className="text-2xl text-white">
+              <p className="text-xl sm:text-2xl text-white">
                 We grow our <span className="text-primary-yellow">crops</span>{" "}
                 organically and rear our{" "}
                 <span className="text-primary-yellow">livestock</span> in the
@@ -305,7 +305,7 @@ const Home = () => {
             <Grid.Col sm={6}>
               {/* <div> */}
               <h2 className="text-white font-anglecia">FAQ</h2>
-              <p className="text-2xl mt-10 font-semibold text-primary-yellow max-w-[500px] font-anglecia tracking-widest">
+              <p className="text-xl sm:text-2xl mt-10 font-semibold text-primary-yellow max-w-[500px] font-anglecia tracking-widest">
                 We have prepared answers to your some of the questions you might
                 have.
               </p>

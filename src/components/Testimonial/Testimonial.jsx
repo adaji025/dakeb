@@ -15,22 +15,22 @@ const Testimonial = () => {
     <div className="min-h-[50vh] w-full flex items-center justify-center max-w-[1440px] mx-auto p-4">
       <Grid className="w-full overflow-hidden">
         <Grid.Col md={6} className="w-full">
-          <div className="flex gap-2">
+          <div className="flex gap-2 mb-2">
             <img src={littleFlower} alt="" />
             <p className="font-anglecia text-primary-green-50">Testimonials</p>
           </div>
-          <h2 className="text-[32px] font-anglecia text-primary-green-100">
+          <h2 className="text-2xl sm:text-[32px] font-anglecia text-primary-green-100">
             Hear from happy clients
           </h2>
           <p className="mt-5 text-primary-green-50 max-w-[550px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien
             massa urna venenatis
           </p>
-          <button className="bg-primary-yellow hover:scale-105 duration-300 mt-5 text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
+          <button className="bg-primary-yellow hover:scale-105  mt-5 text-white w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300">
             Get started
           </button>
         </Grid.Col>
-        <Grid.Col md={6} className="justify-center">
+        <Grid.Col md={6} className="justify-center mt-5 md:mt-0">
         <Tooltip label="Tooltip" className="text-primary-green-50">
           <Swiper
             effect={"cards"}
