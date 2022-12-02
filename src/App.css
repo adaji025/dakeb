@@ -2,14 +2,15 @@
 .swiper-button-prev:after {
   color: #dea90a !important;
   font-weight: 1000;
+  font-size: 32px !important;
 }
 
-@media (min-width: 1000px) {
-  /* .swiper-button-next:after {
-    margin-right: 100px;
+@media (min-width: 1200px) {
+  .swiper-button-next:after {
+    margin-right: 400px;
   }
 
   .swiper-button-prev:after {
-    margin-left: 100px;
-  } */
+    margin-left: 400px;
+  }
 }

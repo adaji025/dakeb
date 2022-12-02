@@ -23,7 +23,7 @@ import maizeVideos from "../../assets/videos/maize-video.mp4";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { sevicesData } from "../../data/data";
 import { Accordion, Grid } from "@mantine/core";
@@ -56,8 +56,9 @@ const Home = () => {
         // pagination={{
         //   clickable: true,
         // }}
+        modules={[Navigation, Pagination]}
         navigation={true}
-        modules={[Navigation]}
+        pagination={true}
         className="w-full"
       >
         <SwiperSlide>
@@ -66,7 +67,7 @@ const Home = () => {
             <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center px-4">
               <div className="text-center mx-auto">
                 <h2
-                  className="text-white text-center font-bold text-[32px] sm:text-[52px] max-w-[600px]"
+                  className="text-white text-center font-bold text-[32px] sm:text-[44px] max-w-[600px]"
                   data-aos="flip-down"
                   data-aos-duration="2000"
                 >
@@ -102,7 +103,7 @@ const Home = () => {
           <img src={banner2} alt="" className="object-cover h-screen" />
           <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center">
             <div className="text-center mx-auto">
-              <h2 className="text-white text-center font-bold text-[32px] sm:text-[52px] max-w-[600px]">
+              <h2 className="text-white text-center font-bold text-[32px] sm:text-[44px] max-w-[600px]">
                 Lorem <span className="text-primary-yellow">ipsum</span> dolor
                 sit, amet consectetur
               </h2>
@@ -111,6 +112,18 @@ const Home = () => {
                 Dignissimos iure voluptatum vitae sed ipsa saepe quam qui sint
                 deserunt maiores.
               </p>
+              <div className="flex justify-center gap-6 font-medium mt-6">
+                  <button onClick={() => navigate('/beef-hunter-careers')}
+                  className="bg-primary-yellow hover:scale-105 text-white w-[120px] sm:w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300"
+                  data-aos="fade-up" data-aos-duration="2000">
+                    Get started
+                  </button>
+                  <button onClick={() => navigate('/what-we-do')}
+                  className="border border-white hover:scale-105 text-white w-[120px] sm:w-[192px] h-[55px] rounded-[30px]  hover:border-primary-green-50/80  hover:border-4 transition-all duration-300"
+                       data-aos="fade-up" data-aos-duration="2000">
+                    Learn more
+                  </button>
+                </div>
             </div>
           </div>
         </SwiperSlide>
@@ -118,7 +131,7 @@ const Home = () => {
           <img src={banner3} alt="" className="object-cover h-screen" />
           <div className="absolute top-0 left-0 w-full h-screen flex justify-center items-center">
             <div className="text-center mx-auto">
-              <h2 className="text-white text-center font-bold text-[32px] sm:text-[52px] max-w-[600px]">
+              <h2 className="text-white text-center font-bold text-[32px] sm:text-[44px] max-w-[600px]">
                 Lorem <span className="text-primary-yellow">ipsum</span> dolor
                 sit, amet consectetur
               </h2>
@@ -127,6 +140,18 @@ const Home = () => {
                 Dignissimos iure voluptatum vitae sed ipsa saepe quam qui sint
                 deserunt maiores.
               </p>
+              <div className="flex justify-center gap-6 font-medium mt-6">
+                  <button onClick={() => navigate('/beef-hunter-careers')}
+                  className="bg-primary-yellow hover:scale-105 text-white w-[120px] sm:w-[192px] h-[55px] rounded-[30px]  hover:bg-primary-green-50/80 hover:text-white  transition-all duration-300"
+                  data-aos="fade-up" data-aos-duration="2000">
+                    Get started
+                  </button>
+                  <button onClick={() => navigate('/what-we-do')}
+                  className="border border-white hover:scale-105 text-white w-[120px] sm:w-[192px] h-[55px] rounded-[30px]  hover:border-primary-green-50/80  hover:border-4 transition-all duration-300"
+                       data-aos="fade-up" data-aos-duration="2000">
+                    Learn more
+                  </button>
+                </div>
             </div>
           </div>
         </SwiperSlide>
@@ -318,10 +343,10 @@ const Home = () => {
                 Learn More
               </button>
             </Grid.Col>
-            <Grid.Col sm={6} className="max-w-[607px] w-full">
+            <Grid.Col sm={6} className="w-full">
               <Accordion
                 variant="separated"
-                className="text-white 2xl:w-[607px] w-full"
+                className="text-white w-full"
                 styles={{
                   item: {
                     // styles added to all items

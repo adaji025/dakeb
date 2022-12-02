@@ -11,7 +11,7 @@ const TestimonialCard = ({ item, idx }) => {
   }, []);
   return (
     <Tooltip label="Tooltip" className="text-primary-green-50">
-    <div className="max-w-[431px] h-[283px] w-full flex justify-center items-center flex-col bg-white shadow-md rounded-[20px] overflow-hidden hover:scale-105 duration-300"
+    <div className=" h-[283px] w-full flex justify-center items-center flex-col bg-white shadow-md rounded-[20px] overflow-hidden hover:scale-105 duration-300"
     // data-aos="flip-up"
     >
       <img src={qMark} alt="" />
