@@ -18,7 +18,7 @@ const Footer = () => {
     AOS.init();
   }, []);
   return (
-    <footer className="overflow-hidden p-4 bg-primary-green-100" data-aos="fade-up">
+    <footer className="overflow-hidden p-6 lg:p-4 bg-primary-green-100" data-aos="fade-up">
       <div className="max-w-[1440px] w-full mx-auto">
         <img src={logo} alt="" className="mb-1" />
         <Grid className="">
