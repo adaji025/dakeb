@@ -1,5 +1,6 @@
 {
   "name": "dakep-website",
+  "homepage": "https://dakepfarms.com.ng",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
